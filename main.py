@@ -1,16 +1,11 @@
-# This is a sample Python script.
+side_a = float(input("Please enter 1 value: "))
+side_b = float(input("Please enter 2 value: "))
+side_c = float(input("Please enter 3 value: "))
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+hp = (side_a + side_b + side_c) / 2
+area = (hp*(hp - side_a) * (hp - side_b) * (hp-side_c))**0.5
 
+print("Side A = ", side_a, "Side B = ", side_b, "Side C = ", side_c)
+print("Perimetr: ", hp, "cm")
+print("Area: ", area, "cm")
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
