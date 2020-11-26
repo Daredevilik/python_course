@@ -1,3 +1,6 @@
+import datetime
+from datetime import date
+
 isikukood = input("Palun sisesta oma isikukood: ").split()
 cnt = 0
 for char in isikukood:
@@ -16,14 +19,17 @@ for char in isikukood:
         kuu = int(s[3:5])
         paev = int(s[5:7])
         region = int(s[7:10])
+        bday = str(paev) + "." + str(kuu)+ ".19" + str(aasta)
+        bday_formated = datetime.datetime.strptime(bday, '%d.%m.%Y')
+        today = date.today()
+        age = today.year - bday_formated.year - ((today.month, today.day) < (bday_formated.month, bday_formated.day))
         if sugu > 6 or aasta > 99 or kuu > 12 or paev > 31:
             print("Vale isikukood!")
         elif sugu == 1 or sugu == 3 or sugu == 5:
-            print("Aitah! Te olete mees ja teie sünnipäev: ", paev, ".", kuu, ".19", aasta, sep="")
+            print("Aitah! Te olete mees ja teie sünnipäev:", bday_formated.date().strftime('%d.%m.%Y'))
         elif sugu == 2 or sugu == 4 or sugu == 6:
-            print("Aitah! Te olete näine ja teie sünnipäev: ", paev, ".", kuu, ".19", aasta, sep="")
-        else:
-            print("Ne znaju zachem ese else nuzen, no pust budet")
+            print("Aitah! Te olete näine ja teie sünnipäev:", bday_formated.date().strftime('%d.%m.%Y'))
+        print("Teile on praegu", age, "aastat")
         if 0 <= region <= 10:
             print("Te olite sündinud Kuressaare Haiglas")
         elif 11 <= region <= 19:
