@@ -26,6 +26,7 @@ for char in isikukood:
             age = today.year - bday_formated.year - ((today.month, today.day) < (bday_formated.month, bday_formated.day))
             if sugu > 6 or aasta > 99 or kuu > 12 or paev > 31:
                 print("Vale isikukood!")
+                break
             elif sugu == 1 or sugu == 3 or sugu == 5:
                 print("Aitah! Te olete mees ja teie sünnipäev:", bday_formated.date().strftime('%d.%m.%Y'))
             elif sugu == 2 or sugu == 4 or sugu == 6:
