@@ -58,5 +58,7 @@ for char in isikukood:
                 print("Te olite sündinud Viljandi Haiglas")
             elif 651 <= region <= 700:
                 print("Te olite sündinud Lõuna-Eesti Haiglas (Võru) või Põlva Haiglas")
+            else:
+                print("Tundmatu region")
         except ValueError:
             print("Vale isikukood!")
