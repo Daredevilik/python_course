@@ -49,4 +49,4 @@ for char in isikukood:
         elif 601 <= region <= 650:
             print("Te olite sündinud Viljandi Haiglas")
         elif 651 <= region <= 700:
-            print("Te olite Lõuna-Eesti Haiglas (Võru) või Põlva Haiglas")
+            print("Te olite sündinud Lõuna-Eesti Haiglas (Võru) või Põlva Haiglas")
