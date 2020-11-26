@@ -1,3 +1,7 @@
+import datetime
+from datetime import date
+
+isikukood = input("Palun sisesta oma isikukood: ").split()
 cnt = 0
 for char in isikukood:
     if not (char.isdigit() or char == '/'):
