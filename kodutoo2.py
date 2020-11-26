@@ -30,13 +30,13 @@ for char in isikukood:
                 print("Aitah! Te olete mees ja teie sünnipäev:", bday_formated.date().strftime('%d.%m.%Y'))
             elif sugu == 2 or sugu == 4 or sugu == 6:
                 print("Aitah! Te olete näine ja teie sünnipäev:", bday_formated.date().strftime('%d.%m.%Y'))
-            print("Teile on praegu", age, "aastat")
+            print("Teile on praegu", age, "täis aastat")
             if 0 <= region <= 10:
                 print("Te olite sündinud Kuressaare Haiglas")
             elif 11 <= region <= 19:
                 print("Te olite sündinud Kuressaare Tartu Ülikooli Naistekliinikus, Tartumaa, Tartu")
             elif 21 <= region <= 220:
-                print("Te olite sündinud Kuressaare  Ida-Tallinna Keskhaiglas või Pelgulinna sünnitusmajas või Hiiumaal või Keilas või Rapla haiglas või Loksa haiglas")
+                print("Te olite sündinud Ida-Tallinna Keskhaiglas või Pelgulinna sünnitusmajas või Hiiumaal või Keilas või Rapla haiglas või Loksa haiglas")
             elif 221 <= region <= 270:
                 print("Te olite sündinud Ida-Viru Keskhaiglas (Kohtla-Järve, endine Jõhvi)")
             elif 271 <= region <= 370:
