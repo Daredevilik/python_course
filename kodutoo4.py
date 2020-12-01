@@ -25,6 +25,10 @@ def ID():
             else:
                 print("Wrong identity code!")
                 ID()
+            if check_status % 2 == 0:
+                print("You are famale.")
+            else:
+                print("You are male.")
         else:
             print("False personal identity code")
             ID()
@@ -32,5 +36,10 @@ def ID():
     except IndexError:
         print("Wrong identity code !")
         ID()
+    except ValueError:
+        print("Wrong identity code !")
+        ID()
+
+ID()
 
 ID()
