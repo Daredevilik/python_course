@@ -3,7 +3,9 @@ def ID():
         identity_code = input("Please insert personal identity code: ")
         array_identity_code = list(identity_code)
         controll_symbol = list("0123456789ABCDEFHJKLMNPRSTUVWXY")
-        controll_number = int((((int("".join(array_identity_code[0:6]+array_identity_code[7:10])))/31) - ((int("".join(array_identity_code[0:6]+array_identity_code[7:10])))//31))*31) #Считает позицию управляющего символа
+        # controll_number = int((((int("".join(array_identity_code[0:6]+array_identity_code[7:10])))/31) - ((int("".join(array_identity_code[0:6]+array_identity_code[7:10])))//31))*31) #Считает позицию управляющего символа
+        controll_number1 = int((int("".join(array_identity_code[0:6]+array_identity_code[7:10])))%31)/31
+        controll_number = int(controll_number1 * 31)
 
         if array_identity_code[10] == controll_symbol[controll_number]: #Сравнивает позицию управляющего символа с позицией в листе
             if array_identity_code[6] == str("+"):
@@ -39,7 +41,5 @@ def ID():
     except ValueError:
         print("Wrong identity code !")
         ID()
-
-ID()
 
 ID()
