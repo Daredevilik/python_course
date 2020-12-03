@@ -41,7 +41,7 @@ def get_content(html):
     return cars
 
 def save_file(items, path):
-    with open(path, 'w', newline='') as file:
+    with open(path, 'w', newline='', encoding='UTF8') as file:
         writer = csv.writer(file, delimiter=';')
         writer.writerow(['Марка', 'Ссылка', 'Цена 1', 'Цена 2', 'Город'])
         for item in items:
