@@ -18,3 +18,8 @@ def check():
     else:
         print('Choose from 1 to 3')
         check()
+try:
+    check()
+except ValueError:
+    print('Only numbers!')
+    check()
