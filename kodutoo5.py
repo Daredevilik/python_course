@@ -23,7 +23,7 @@ def choose2():
     print('Option2')
 
 def check():
-    print('Please choose option:\n 1) Calculate words and unique words \n 2) ......... \n 3) Close program\n')
+    print('Please choose option:\n 1) Calculate words and unique words \n 2) Calculate words and unique words in directory \n 3) Close program\n')
     choose = int(input('Type here:'))
 
     if choose == 1:
