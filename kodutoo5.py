@@ -1,16 +1,21 @@
 def choose1():
-    fname = input("Enter the name of the file:")
-    infile = open(fname, 'r')
-    uniques = set()
-    words = 0
-    for line in infile:
-        wordslist = line.split()
-        uniques |= set(line.split())
-        words = words + len(wordslist)
-        outfile = open(fname + "_copy.txt", 'w', encoding='UTF8')
-        outfile.write("In this text: " + str(words) + " words.\n" + "Unique words: " + str(uniques) + " ( " + str(len(uniques)) + " pcs )")
+    try:
+        fname = input("Enter the name of the file:")
+        infile = open(fname, 'r')
+        uniques = set()
+        words = 0
+        for line in infile:
+            wordslist = line.split()
+            uniques |= set(line.split())
+            words = words + len(wordslist)
+            outfile = open(fname + "_copy.txt", 'w', encoding='UTF8')
+            outfile.write("In this text: " + str(words) + " words.\n" + "Unique words: " + str(uniques) + " ( " + str(len(uniques)) + " pcs )")
+            print('Great! Please check file with name _copy.txt !')
+        infile.close()
 
-    infile.close()
+    except FileNotFoundError:
+        print("Wrong filename!")
+        choose1()
 
 
 
